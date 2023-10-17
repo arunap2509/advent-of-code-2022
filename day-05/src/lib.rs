@@ -66,6 +66,7 @@ fn move_crates(stacks: &mut Vec<Vec<char>>, moves: Vec<Vec<u32>>) -> String {
         let to = m[2] as usize;
         let mut popped_val = vec![];
 
+        // this is the only change required for the day 5, part 2 solution
         if quantity <= 1 {
             (0..quantity).for_each(|_| popped_val.push(stacks[from - 1].pop().unwrap()));
         } else {
